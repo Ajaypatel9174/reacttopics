@@ -16,7 +16,8 @@ function Hero(){
      <img className="img1" src="insta.png" alt="" />
      <img className="img2" src="youtube.png" alt="" />
      <img className="img3" src="twiteer.png" alt="" />
-     <img  className="img4"  src="facebook.jpg" alt=""/><br /><br />
+     <img  className="img4"  src="facebook.jpg" alt=""/><br /><br /> 
+     
 
 
 
