@@ -18,15 +18,15 @@
 // }
 // export default Child1
 
-import Child2 from "./Child2"
-function Child1({name}){
+// import Child2 from "./Child2"
+// function Child1({name}){
 
-return(
-    <>
-    <h1>welcome to child1</h1>
-    <Child2 name={name} />
-    </>
-)
+// return(
+//     <>
+//     <h1>welcome to child1</h1>
+//     <Child2 name={name} />
+//     </>
+// )
     
-}
-export default Child1
+// }
+// export default Child1

@@ -12,20 +12,33 @@
 //         </>
 // )
 // }
-  import Child3 from "./Child3"
-    function Child2(props){
-        return(
-            <>
-            <h1>welcome to child2</h1>
-            <h1>{props.name}</h1>
-            <Child3/>
-            </>
+  // import Child3 from "./Child3"
+  //   function Child2(props){
+  //       return(
+  //           <>
+  //           <h1>welcome to child2</h1>
+  //           <h1>{props.name}</h1>
+  //           <Child3/>
+  //           </>
 
 
-        )
+  //       )
 
 
 
 
-    }
-    export default Child2
+  //   }
+  //   export default Child2
+
+  function Child2(){ 
+    
+    return(
+      <>
+
+      <h1>welcome</h1>
+
+      <h1>{props.name}</h1>
+      </>
+    )
+  }
+  export default Child2

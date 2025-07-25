@@ -63,16 +63,23 @@ export default App */}
 // export default App
 
 
-import Child1 from "./components/Child1"
+// import Child1 from "./components/Child1"
+
+
+
 import Child2 from "./components/Child2"
 
+
 function App(){
+  // let newname="ajay"
   return(
     <>
     
-    <h1>welcome to react</h1>
-    <Child1 name="ajay"/>
-    
+    {/* <h1>welcome to react</h1>
+    <Child1 name="rohit"/>
+     */}
+
+     < Child2 name="ajay" />
     
    </>
 
