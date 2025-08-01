@@ -1,0 +1,18 @@
+{
+   "userdata":[
+    {
+        "name":"ajay",
+        "contact":45678,
+        "city":"bhopal",
+        "email":"ajay@gmail.com"
+    },
+
+        {
+        "name":"rohit",
+        "contact":95678,
+        "city":"vidisha",
+        "email":"rohit@gmail.com"
+    }
+    
+   ]
+}

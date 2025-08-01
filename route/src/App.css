@@ -2,3 +2,15 @@
   background-color: whitesmoke;
 
 }
+.nav{
+  display: flex;
+  justify-content:  center;
+  background-color: aqua;
+}
+nav ul{
+  display: flex;
+  justify-content:  center;
+  gap: 80px;
+  width: 100vh;
+  list-style: none;
+}

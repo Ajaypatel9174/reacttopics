@@ -1,7 +1,8 @@
 import State from "./assets/State"
 import Color from "./color"
-import Form from "./form"
+import Form  from "./form"
 import './App.css'
+import {Route,Routes} from "react-router-dom"
 
 function App(){
   return(
@@ -12,7 +13,7 @@ function App(){
 
     {/* <h1>this is app</h1> */}
 
-    <nav className="nav">
+    {/* <nav className="nav">
 
       <ul>
 
@@ -26,11 +27,21 @@ function App(){
 
 
 
-    </nav>
+    </nav> */}
 
-     < State />
-    < Color />
-    < Form /> 
+
+    {<Routes >
+      
+      
+      <Route path="/state" element={<State />} />
+      < Route path="/Color" element={<Color />}/>
+      <Route path="/Form" element={<Form />}/>
+
+
+
+
+      </Routes>}
+
     
     </>
     

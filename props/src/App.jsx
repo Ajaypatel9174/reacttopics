@@ -71,7 +71,7 @@ import Child2 from "./components/Child2"
 
 
 function App(){
-  // let newname="ajay"
+  let fname="ajay"
   return(
     <>
     
@@ -79,7 +79,7 @@ function App(){
     <Child1 name="rohit"/>
      */}
 
-     < Child2 name="ajay" />
+     < Child2 name={fname} />
     
    </>
 

@@ -157,16 +157,16 @@ function App() {
   }
   function res(){
     setcount(0)
-  }
+  }                  
   
   return (
     <>
 
-{/* 
+
       <h1 style={{color:count%2==0?"red":"purple"}}> {count}</h1>
       <button onClick={add}>add </button>
       <button onClick={sub}>sub </button>
-      <button onClick={res}>reset</button> */}
+      <button onClick={res}>reset</button>
       < State />
 
 
