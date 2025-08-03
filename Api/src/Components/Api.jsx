@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const Api =() =>{
 
@@ -10,10 +11,17 @@ const Api =() =>{
         .then((res)=>setApidata(res.data))
 
     },[])
+
+       function Del(id){
+      axios.delete(`http://localhost:3000/userdata/${id}`)
+      .then(()=>alert("delete.."))
+      .catch((err)=>alert(err))
+
+    }
     return(
         <>
         <h1>Api try</h1> 
-        
+        <Link to="/">Home</Link>
         <table border="2">
             <tr>
                 <th>ID</th>
@@ -21,6 +29,8 @@ const Api =() =>{
                 <th>contact</th>
                 <th>city</th>
                 <th>email</th>
+                <th>update</th>
+                <th>Delete</th>
 
 
             </tr>
@@ -33,6 +43,8 @@ const Api =() =>{
                 <td>{e.contact}</td>
                 <td>{e.city}</td>
                 <td>{e.email}</td>
+                <td>{e.update}</td>
+                <td>  <button onClick={()=>Del(e.id)}>Delete</button> </td>
 
 
         </tr>

@@ -1,5 +1,6 @@
+import axios from "axios"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Form(){
     let [frmData,setfrmdata]=useState({
@@ -13,17 +14,18 @@ function Form(){
     }
 
     function finalsubmit(e){
-        e.preeventdefaulty()
-        axios.post('http://localhost:3000/userdata')
+        e.preventDefault()
+        axios.post('http://localhost:3000/userdata',frmData)
         .then(()=>alert("inserted.."))
         .catch((err)=>alert(err))
-        nav('./apidata')
+        nav('/apidata')
     }
+ 
 
     return(
         <>
-
-        <form action="" onSubmit={finalsubmit}>
+            <Link to="/apidata">Table</Link>
+        <form onSubmit={finalsubmit}>
 
             <label htmlFor="">Name</label>
             <input type="text" name="name" onChange={(handleinput)} /> <br /> <br />
@@ -50,27 +52,7 @@ function Form(){
         </form>
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        
-        
-        
-        
-        
-        
-        </>
+  </>
 
 
 
