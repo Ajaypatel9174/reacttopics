@@ -3,6 +3,7 @@ import Color from "./color"
 import Form  from "./form"
 import './App.css'
 import {Route,Routes} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function App(){
   return(
@@ -11,15 +12,15 @@ function App(){
     
   
 
-    {/* <h1>this is app</h1> */}
+    <h1>this is app</h1> 
 
-    {/* <nav className="nav">
+     <nav className="nav">
 
       <ul>
 
-        <li>State</li>
-        <li>form</li>
-        <li>Color</li>
+         <li> <Link to="/state" >State</Link>  </li>
+        <li>< Link to="/form" >Form</Link></li>
+        <li><Link  to="/color">Color</Link></li>
 
 
       </ul>
@@ -27,7 +28,7 @@ function App(){
 
 
 
-    </nav> */}
+    </nav>
 
 
     {<Routes >
@@ -39,7 +40,7 @@ function App(){
 
 
 
-
+ 
       </Routes>}
 
     

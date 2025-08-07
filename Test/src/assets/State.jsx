@@ -1,19 +1,19 @@
 import { useState } from "react"
 
 function State(){
-      let[name,setname]=useState("hello")
+      
 
-      function change(){
-        setname("")
-      }
+
+      let[a,setA]=useState(false)
     return(
       
 <>
 
-<h1>{name}</h1>
 
-<button  onClick={(change)} >hide</button >
+{ a? "" :<h1>Hello</h1>}
 
+
+<button onClick={()=>setA(!a)}>{a? "show":"hide"}</button>
 
 
 

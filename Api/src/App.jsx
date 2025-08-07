@@ -10,7 +10,7 @@ function App() {
     <Routes> 
       
       <Route index element={< Form />} />
-      < Route path="/apidata" element={ <Api />} />  
+      <Route path="/apidata" element={ <Api />} />  
 
     </Routes>
     

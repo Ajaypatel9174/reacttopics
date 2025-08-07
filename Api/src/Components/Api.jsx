@@ -6,17 +6,32 @@ const Api =() =>{
 
     let[apidata,setApidata]=useState([])
 
+    let[showfrm,setShowfrm]=useState(false)
+
+    let[editdata,setEditdata]=useState({})
+
     useEffect(()=>{
-        axios.get('http://localhost:3000/userdata')
+        axios.get('http://localhost:3000/userdata') 
         .then((res)=>setApidata(res.data))
 
-    },[])
+    },[handleDelete])
 
-       function Del(id){
+       function handleDelete(id){
       axios.delete(`http://localhost:3000/userdata/${id}`)
-      .then(()=>alert("delete.."))
+      .then(()=>alert("delete..")) 
       .catch((err)=>alert(err))
 
+    }
+
+    function handleedit(e){
+        const {name,value} = e.target
+        setEditdata({...editdata,[name]:value})
+    }
+
+    function finaledit(e){
+        e.preventDefault()
+        axios.put(`http://localhost:3000/userdata/${editdata.id}`,editdata)
+        .then(()=>alert("updated.."))
     }
     return(
         <>
@@ -29,7 +44,7 @@ const Api =() =>{
                 <th>contact</th>
                 <th>city</th>
                 <th>email</th>
-                <th>update</th>
+                <th>Edit</th>
                 <th>Delete</th>
 
 
@@ -43,8 +58,8 @@ const Api =() =>{
                 <td>{e.contact}</td>
                 <td>{e.city}</td>
                 <td>{e.email}</td>
-                <td>{e.update}</td>
-                <td>  <button onClick={()=>Del(e.id)}>Delete</button> </td>
+                <td> <button onClick={()=>(setShowfrm(true),setEditdata(e))}>Edit</button></td>
+                <td>  <button onClick={()=>handleDelete(e.id)}>Delete</button> </td>
 
 
         </tr>
@@ -56,7 +71,39 @@ const Api =() =>{
 
 
         </table>
-        
+        <hr />
+
+       { showfrm && <form action="" onSubmit={finaledit}>
+
+            <label htmlFor="">id</label>
+            <input type="text" name="id" value={editdata.id} onChange={handleedit} /> <br /> <br />
+
+               <label htmlFor="">Name</label>
+            <input type="text" name="name"   value={editdata.name}   onChange={handleedit}/> <br /> <br />
+
+
+               <label htmlFor="">contact</label>
+            <input type="text" name="contact" value={editdata.contact}  onChange={handleedit} /> <br /> <br />
+
+               <label htmlFor="">city</label>
+            <input type="text" name="city"  value={editdata.city}  onChange={handleedit}  /> <br /> <br />
+
+
+               <label htmlFor="">email</label>
+            <input type="text" name="email"  value={editdata.email} onChange={handleedit}  /> <br /> <br />
+
+            <input type="submit" />
+
+
+
+
+
+
+
+
+
+
+        </form>} 
         
         
         </>

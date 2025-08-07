@@ -23,14 +23,15 @@ function Color(){
 
 
 <div style={{height:"100vh", background:color}}>
-    <h1>{color}</h1>
+   
+<center> <h1>{color}</h1></center>
 
-
-
+<center>
     <button onClick={(color1)}>red</button>
     <button onClick={(color2)}>blue</button>
     <button onClick={(color3)}>green</button>
     <button onClick={(res)}>reset</button>
+    </center>
 
 </div>
 )
